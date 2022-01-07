@@ -1,0 +1,134 @@
+* {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    //border: 1px dotted red;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+}
+
+/* HEADER */
+
+header {
+    height: 7vh;
+    font-size: .7rem;
+    color: whitesmoke;
+    background-color: rgb(35, 190, 95);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header h1 {
+    margin-left: 7vw;
+}
+
+/* MAIN */ 
+
+.container {
+    display: grid;
+    grid-template: 60vmin 20vmax 20vmax 5vmax / repeat(4, 1fr);
+    gap: 3vmin;
+}
+
+.box {
+    display: flex;
+    flex-shrink: 1;
+}
+
+.box p {
+    background-color: whitesmoke;
+    text-align: center;
+    opacity: .6;
+    padding: 1vh;
+    line-height: 1.3em;
+    display: flex;
+    flex-shrink: 1;
+}
+
+.a {
+    grid-area: 1 / 1 / 2 / 5;
+    background-image: url("../images/levi-bare-bvvl2E0s69I-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.opaque:hover {
+    //background-color: rgba(35, 190, 94, 0.822);
+    opacity: .9;
+}
+
+.a p {
+    width: 250px;
+    flex-shrink: 2;    
+}
+
+.b {
+    grid-area: 2 / 1 / 4 / 3;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-left: 3vmin;
+}
+
+.b p {
+    margin-bottom: 7vmax;
+}
+
+.c {
+    grid-area: 2 / 3 / 4 / 5;
+    justify-content: flex-start;
+}
+
+.c img {
+    max-height: 100%;
+}
+
+.d {
+    grid-column: 1 / -1;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+}
+
+.e {
+    grid-column: 1 / -1;
+    height: 7vh;
+    text-align: center;
+    color: whitesmoke;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 3vh;
+}
+
+.e li {
+    margin-bottom: 1vh;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .box p {
+        font-size: .7rem;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    
+    .container {
+        grid-template: 60vmin 20vmax 20vmax 5vmax / repeat(4, 1fr);
+    }
+}
